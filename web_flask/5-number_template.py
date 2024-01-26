@@ -5,6 +5,8 @@
 from flask import Flask, url_for, render_template
 
 app = Flask(__name__)
+
+
 @app.route("/", strict_slashes=False)
 def hello_world():
     return "Hello HBNB!"
@@ -29,6 +31,7 @@ def display(text):
 @app.route('/number/<int:n>', strict_slashes=False)
 def num_display(n):
     return "{} is a number".format(n)
+
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
 def number_template(n):
